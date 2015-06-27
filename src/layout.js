@@ -1,10 +1,11 @@
 import React from 'react'
+import LinkHandler from './components/link-handler'
 
 export default React.createClass({
 
   render () {
     return (
-      <div>
+      <LinkHandler>
         <nav className='top-nav top-nav-light cf' role='navigation'>
           <input id='menu-toggle' className='menu-toggle' type='checkbox'/>
           <label htmlFor='menu-toggle'>Menu</label>
@@ -18,7 +19,7 @@ export default React.createClass({
         <div className='container'>
           {this.props.children}
         </div>
-      </div>
+      </LinkHandler>
     )
   }
 
