@@ -3,15 +3,17 @@ import React from 'react'
 import HomePage from './pages/home'
 import ReposPage from './pages/repos'
 import LayoutPage from './layout'
-
+import LinkHandler from './components/link-handler'
 
 export default Router.extend({
   renderPage (page, opts = {layout: true}) {
     if(opts.layout) {
       page = (
-        <LayoutPage>
-          {page}
-        </LayoutPage>
+        <LinkHandler>
+          <LayoutPage>
+            {page}
+          </LayoutPage>
+        </LinkHandler>
       )
     }
 
